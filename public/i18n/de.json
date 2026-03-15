@@ -1,0 +1,166 @@
+{
+  "common": {
+    "confirmTitle": "Bestätigen",
+    "delete": "Löschen",
+    "cancel": "Abbrechen",
+    "error": "Ein Fehler ist aufgetreten"
+  },
+  "app": {
+    "title": "Authora Admin"
+  },
+  "nav": {
+    "registrations": "Registrierungen",
+    "users": "Benutzer",
+    "settings": "Einstellungen"
+  },
+  "signIn": {
+    "title": "Anmelden",
+    "username": "Benutzername",
+    "password": "Passwort",
+    "submit": "Anmelden",
+    "errors": {
+      "usernameRequired": "Benutzername ist erforderlich",
+      "passwordRequired": "Passwort ist erforderlich",
+      "invalidCredentials": "Ungültiger Benutzername oder Passwort"
+    }
+  },
+  "registrations": {
+    "email": "E-Mail",
+    "tokenExpiresIn": "Läuft ab in",
+    "createdAt": "Erstellt am",
+    "deleteSelected": "Löschen ({{count}})",
+    "deleted": "{{count}} Registrierung(en) gelöscht",
+    "confirmDeleteOne": "Möchten Sie diese Registrierung wirklich löschen?",
+    "confirmDeleteMany": "Möchten Sie {{count}} Registrierung(en) wirklich löschen?",
+    "create": "Erstellen",
+    "createTitle": "Registrierung erstellen",
+    "password": "Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "created": "Registrierung erstellt",
+    "createError": "Registrierung konnte nicht erstellt werden",
+    "errors": {
+      "emailRequired": "E-Mail ist erforderlich",
+      "emailInvalid": "Bitte geben Sie eine gültige E-Mail ein",
+      "emailUnavailable": "Diese E-Mail wird bereits verwendet",
+      "passwordRequired": "Passwort ist erforderlich",
+      "confirmPasswordRequired": "Bitte bestätigen Sie das Passwort",
+      "passwordMismatch": "Passwörter stimmen nicht überein"
+    }
+  },
+  "users": {
+    "email": "E-Mail",
+    "createdAt": "Erstellt am",
+    "deleteSelected": "Löschen ({{count}})",
+    "deleted": "{{count}} Benutzer gelöscht",
+    "confirmDeleteOne": "Möchten Sie diesen Benutzer wirklich löschen?",
+    "confirmDeleteMany": "Möchten Sie {{count}} Benutzer wirklich löschen?"
+  },
+  "userDetail": {
+    "tabs": {
+      "oneTimeTokens": "Einmal-Token",
+      "passwords": "Passwörter",
+      "refreshTokens": "Aktualisierungs-Token",
+      "mfa": "MFA"
+    },
+    "type": "Typ",
+    "status": "Status",
+    "expiresIn": "Läuft ab in",
+    "createdAt": "Erstellt am",
+    "active": "Aktiv",
+    "revoked": "Widerrufen",
+    "verified": "Verifiziert",
+    "pending": "Ausstehend",
+    "recoveryCodes": "Wiederherstellungscodes",
+    "revokeAll": "Alle widerrufen",
+    "removeMfa": "MFA entfernen",
+    "tokenRevoked": "Token widerrufen",
+    "allTokensRevoked": "Alle Token widerrufen",
+    "passwordRevoked": "Passwort widerrufen",
+    "refreshTokenRevoked": "Aktualisierungs-Token widerrufen",
+    "allRefreshTokensRevoked": "Alle Aktualisierungs-Token widerrufen",
+    "mfaRemoved": "MFA entfernt",
+    "revoke": "Widerrufen",
+    "confirmRevokeToken": "Möchten Sie diesen Token wirklich widerrufen?",
+    "confirmRevokeAllTokens": "Möchten Sie alle Einmal-Token wirklich widerrufen?",
+    "confirmRevokePassword": "Möchten Sie dieses Passwort wirklich widerrufen?",
+    "confirmRevokeRefreshToken": "Möchten Sie diesen Aktualisierungs-Token wirklich widerrufen?",
+    "confirmRevokeAllRefreshTokens": "Möchten Sie alle Aktualisierungs-Token wirklich widerrufen?",
+    "confirmRemoveMfa": "Möchten Sie MFA für diesen Benutzer wirklich entfernen?",
+    "noOneTimeTokens": "Keine Einmal-Token",
+    "noPasswords": "Keine Passwörter",
+    "noRefreshTokens": "Keine Aktualisierungs-Token",
+    "noMfa": "MFA nicht aktiviert"
+  },
+  "settings": {
+    "saved": "Einstellung gespeichert",
+    "reset": "Einstellung zurückgesetzt",
+    "default": "Standard",
+    "value": "Wert",
+    "apply": "Anwenden",
+    "applyDefault": "Standard anwenden",
+    "modified": "Geändert",
+    "resetAll": "Alle zurücksetzen",
+    "resetAllConfirm": "Möchten Sie wirklich alle Einstellungen auf die Standardwerte zurücksetzen?",
+    "resetAllDone": "Alle Einstellungen wurden zurückgesetzt",
+    "enabled": "Aktiviert",
+    "disabled": "Deaktiviert",
+    "errors": {
+      "required": "Wert ist erforderlich",
+      "min": "Mindestwert ist {{min}}",
+      "max": "Höchstwert ist {{max}}",
+      "greaterThan": "Muss größer sein als {{key}} ({{value}})",
+      "lessThan": "Muss kleiner sein als {{key}} ({{value}})"
+    },
+    "categories": {
+      "authentication": "Authentifizierung",
+      "password": "Passwort",
+      "account": "Konto",
+      "mfa": "MFA",
+      "security": "Sicherheit"
+    },
+    "keys": {
+      "authentication.access_token_ttl_sec": { "label": "Zugriffstoken", "description": "Dauer in Sekunden bis ein Zugriffstoken abläuft" },
+      "authentication.refresh_token_short_ttl_sec": { "label": "Aktualisierungstoken (kurz)", "description": "Dauer in Sekunden für kurzlebige Token (ohne Merken)" },
+      "authentication.refresh_token_long_ttl_sec": { "label": "Aktualisierungstoken (lang)", "description": "Dauer in Sekunden für langlebige Token (mit Merken)" },
+      "authentication.magic_link_token_ttl_sec": { "label": "Magic Link", "description": "Dauer in Sekunden bis ein Magic Link abläuft" },
+      "authentication.magic_link_refresh_token_ttl_sec": { "label": "Magic Link Aktualisierung", "description": "Dauer in Sekunden des via Magic Link ausgestellten Tokens" },
+      "password.min_length": { "label": "Mindestlänge", "description": "Minimale Anzahl erforderlicher Zeichen" },
+      "password.require_digit": { "label": "Ziffer erforderlich", "description": "Passwort muss mindestens eine Ziffer enthalten" },
+      "password.require_special_char": { "label": "Sonderzeichen erforderlich", "description": "Passwort muss mindestens ein Sonderzeichen enthalten" },
+      "password.require_lowercase": { "label": "Kleinbuchstabe erforderlich", "description": "Passwort muss mindestens einen Kleinbuchstaben enthalten" },
+      "password.require_uppercase": { "label": "Großbuchstabe erforderlich", "description": "Passwort muss mindestens einen Großbuchstaben enthalten" },
+      "password.forbid_sequential_chars": { "label": "Sequenzen verbieten", "description": "Passwörter mit aufeinanderfolgenden Zeichen ablehnen (abc, 123)" },
+      "password.forbid_repeated_chars": { "label": "Wiederholungen verbieten", "description": "Passwörter mit wiederholten Zeichen ablehnen (aaa, 111)" },
+      "password.forbid_keyboard_sequence": { "label": "Tastatursequenzen verbieten", "description": "Passwörter mit Tastaturmustern ablehnen (qwerty)" },
+      "password.forbid_user_info": { "label": "Persönliche Infos verbieten", "description": "Passwörter mit E-Mail oder Name des Benutzers ablehnen" },
+      "password.forbid_common_password": { "label": "Häufige Passwörter verbieten", "description": "Häufig verwendete oder kompromittierte Passwörter ablehnen" },
+      "password.forgot_token_ttl_sec": { "label": "Passwort-vergessen-Token", "description": "Dauer in Sekunden bis ein Rücksetzungstoken abläuft" },
+      "account.email_verification_token_ttl_sec": { "label": "E-Mail-Verifizierung", "description": "Dauer in Sekunden bis ein Verifizierungstoken abläuft" },
+      "account.deletion_token_ttl_sec": { "label": "Kontolöschung", "description": "Dauer in Sekunden bis ein Löschungstoken abläuft" },
+      "mfa.verify_token_ttl_sec": { "label": "MFA-Verifizierung", "description": "Dauer in Sekunden zum Abschluss der MFA-Verifizierung" },
+      "mfa.validate_token_ttl_sec": { "label": "MFA-Validierung", "description": "Dauer in Sekunden zur Validierung eines MFA-Codes bei der Anmeldung" },
+      "mfa.disabling_token_ttl_sec": { "label": "MFA-Deaktivierung", "description": "Dauer in Sekunden zur Bestätigung der MFA-Deaktivierung" },
+      "security.hash_memory_cost": { "label": "Hash-Speicherkosten", "description": "Speicher in KiB für den Argon2-Algorithmus" },
+      "security.hash_time_cost": { "label": "Hash-Zeitkosten", "description": "Anzahl der Iterationen für Argon2-Hashing" },
+      "security.hash_parallelism": { "label": "Hash-Parallelität", "description": "Anzahl paralleler Threads für Argon2-Hashing" },
+      "security.throttle_ttl_sec": { "label": "Begrenzungsfenster", "description": "Zeitfenster in Sekunden für die Ratenbegrenzung" },
+      "security.throttle_origin_limit": { "label": "Ursprungslimit", "description": "Maximale Anfragen pro Ursprung innerhalb des Fensters" },
+      "security.throttle_identity_limit": { "label": "Identitätslimit", "description": "Maximale Anfragen pro Identität (E-Mail) innerhalb des Fensters" },
+      "security.throttle_combined_limit": { "label": "Kombiniertes Limit", "description": "Maximale Anfragen pro Ursprung+Identität-Kombination" },
+      "security.endpoint_delay_min_ms": { "label": "Minimale Verzögerung", "description": "Minimale künstliche Verzögerung in Millisekunden" },
+      "security.endpoint_delay_max_ms": { "label": "Maximale Verzögerung", "description": "Maximale künstliche Verzögerung in Millisekunden" }
+    }
+  },
+  "passwordRules": {
+    "minLength": "Mindestens {{count}} Zeichen",
+    "hasLowercase": "Mindestens ein Kleinbuchstabe",
+    "hasUppercase": "Mindestens ein Großbuchstabe",
+    "hasDigit": "Mindestens eine Ziffer",
+    "hasSpecialChar": "Mindestens ein Sonderzeichen",
+    "noSequentialChars": "Keine aufeinanderfolgenden Zeichen",
+    "noRepeatedChars": "Keine wiederholten Zeichen",
+    "noKeyboardSequence": "Keine Tastatursequenzen",
+    "noUserInfo": "Darf keine persönlichen Informationen enthalten",
+    "noCommonPassword": "Darf kein häufiges Passwort sein"
+  }
+}

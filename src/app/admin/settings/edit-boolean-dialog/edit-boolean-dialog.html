@@ -1,0 +1,21 @@
+<ng-container *transloco="let t">
+  <h2 mat-dialog-title>{{ data.label }}</h2>
+  <mat-dialog-content>
+    <div class="vertical-container">
+      <p class="description">{{ t('settings.keys.' + data.key + '.description') }}</p>
+      <mat-button-toggle-group [(ngModel)]="value">
+        <mat-button-toggle [value]="true">{{ t('settings.enabled') }}</mat-button-toggle>
+        <mat-button-toggle [value]="false">{{ t('settings.disabled') }}</mat-button-toggle>
+      </mat-button-toggle-group>
+      <div class="default">
+        {{ t('settings.default') }}: {{ data.meta.default ? t('settings.enabled') : t('settings.disabled') }}
+      </div>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button [mat-dialog-close]="undefined">{{ t('common.cancel') }}</button>
+    <button mat-flat-button color="primary" (click)="save()">
+      {{ t('settings.apply') }}
+    </button>
+  </mat-dialog-actions>
+</ng-container>

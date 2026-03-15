@@ -1,0 +1,166 @@
+{
+  "common": {
+    "confirmTitle": "Confirm",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "error": "An error occurred"
+  },
+  "app": {
+    "title": "Authora Admin"
+  },
+  "nav": {
+    "registrations": "Registrations",
+    "users": "Users",
+    "settings": "Settings"
+  },
+  "signIn": {
+    "title": "Sign in",
+    "username": "Username",
+    "password": "Password",
+    "submit": "Sign in",
+    "errors": {
+      "usernameRequired": "Username is required",
+      "passwordRequired": "Password is required",
+      "invalidCredentials": "Invalid username or password"
+    }
+  },
+  "registrations": {
+    "email": "Email",
+    "tokenExpiresIn": "Token expires in",
+    "createdAt": "Created at",
+    "deleteSelected": "Delete ({{count}})",
+    "deleted": "{{count}} registration(s) deleted",
+    "confirmDeleteOne": "Are you sure you want to delete this registration?",
+    "confirmDeleteMany": "Are you sure you want to delete {{count}} registration(s)?",
+    "create": "Create",
+    "createTitle": "Create registration",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "created": "Registration created",
+    "createError": "Failed to create registration",
+    "errors": {
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email",
+      "emailUnavailable": "This email is already in use",
+      "passwordRequired": "Password is required",
+      "confirmPasswordRequired": "Please confirm the password",
+      "passwordMismatch": "Passwords do not match"
+    }
+  },
+  "users": {
+    "email": "Email",
+    "createdAt": "Created at",
+    "deleteSelected": "Delete ({{count}})",
+    "deleted": "{{count}} user(s) deleted",
+    "confirmDeleteOne": "Are you sure you want to delete this user?",
+    "confirmDeleteMany": "Are you sure you want to delete {{count}} user(s)?"
+  },
+  "userDetail": {
+    "tabs": {
+      "oneTimeTokens": "One-Time Tokens",
+      "passwords": "Passwords",
+      "refreshTokens": "Refresh Tokens",
+      "mfa": "MFA"
+    },
+    "type": "Type",
+    "status": "Status",
+    "expiresIn": "Expires in",
+    "createdAt": "Created at",
+    "active": "Active",
+    "revoked": "Revoked",
+    "verified": "Verified",
+    "pending": "Pending",
+    "recoveryCodes": "Recovery codes",
+    "revokeAll": "Revoke all",
+    "removeMfa": "Remove MFA",
+    "tokenRevoked": "Token revoked",
+    "allTokensRevoked": "All tokens revoked",
+    "passwordRevoked": "Password revoked",
+    "refreshTokenRevoked": "Refresh token revoked",
+    "allRefreshTokensRevoked": "All refresh tokens revoked",
+    "mfaRemoved": "MFA removed",
+    "revoke": "Revoke",
+    "confirmRevokeToken": "Are you sure you want to revoke this token?",
+    "confirmRevokeAllTokens": "Are you sure you want to revoke all one-time tokens?",
+    "confirmRevokePassword": "Are you sure you want to revoke this password?",
+    "confirmRevokeRefreshToken": "Are you sure you want to revoke this refresh token?",
+    "confirmRevokeAllRefreshTokens": "Are you sure you want to revoke all refresh tokens?",
+    "confirmRemoveMfa": "Are you sure you want to remove MFA for this user?",
+    "noOneTimeTokens": "No one-time tokens",
+    "noPasswords": "No passwords",
+    "noRefreshTokens": "No refresh tokens",
+    "noMfa": "MFA not enabled"
+  },
+  "settings": {
+    "saved": "Setting saved",
+    "reset": "Setting reset to default",
+    "default": "Default",
+    "value": "Value",
+    "apply": "Apply",
+    "applyDefault": "Apply default",
+    "modified": "Modified",
+    "resetAll": "Reset all",
+    "resetAllConfirm": "Are you sure you want to reset all settings to their default values?",
+    "resetAllDone": "All settings reset to default",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "errors": {
+      "required": "Value is required",
+      "min": "Minimum value is {{min}}",
+      "max": "Maximum value is {{max}}",
+      "greaterThan": "Must be greater than {{key}} ({{value}})",
+      "lessThan": "Must be less than {{key}} ({{value}})"
+    },
+    "categories": {
+      "authentication": "Authentication",
+      "password": "Password",
+      "account": "Account",
+      "mfa": "MFA",
+      "security": "Security"
+    },
+    "keys": {
+      "authentication.access_token_ttl_sec": { "label": "Access token TTL", "description": "Duration in seconds before an access token expires" },
+      "authentication.refresh_token_short_ttl_sec": { "label": "Refresh token (short)", "description": "Duration in seconds for short-lived refresh tokens (no remember me)" },
+      "authentication.refresh_token_long_ttl_sec": { "label": "Refresh token (long)", "description": "Duration in seconds for long-lived refresh tokens (remember me)" },
+      "authentication.magic_link_token_ttl_sec": { "label": "Magic link TTL", "description": "Duration in seconds before a magic link expires" },
+      "authentication.magic_link_refresh_token_ttl_sec": { "label": "Magic link refresh TTL", "description": "Duration in seconds for the refresh token issued via magic link" },
+      "password.min_length": { "label": "Minimum length", "description": "Minimum number of characters required in a password" },
+      "password.require_digit": { "label": "Require digit", "description": "Password must contain at least one digit" },
+      "password.require_special_char": { "label": "Require special character", "description": "Password must contain at least one special character" },
+      "password.require_lowercase": { "label": "Require lowercase", "description": "Password must contain at least one lowercase letter" },
+      "password.require_uppercase": { "label": "Require uppercase", "description": "Password must contain at least one uppercase letter" },
+      "password.forbid_sequential_chars": { "label": "Forbid sequential characters", "description": "Reject passwords containing sequential characters (abc, 123)" },
+      "password.forbid_repeated_chars": { "label": "Forbid repeated characters", "description": "Reject passwords containing repeated characters (aaa, 111)" },
+      "password.forbid_keyboard_sequence": { "label": "Forbid keyboard sequences", "description": "Reject passwords containing keyboard patterns (qwerty, azerty)" },
+      "password.forbid_user_info": { "label": "Forbid user info", "description": "Reject passwords containing the user's email or name" },
+      "password.forbid_common_password": { "label": "Forbid common passwords", "description": "Reject commonly used or breached passwords" },
+      "password.forgot_token_ttl_sec": { "label": "Forgot password TTL", "description": "Duration in seconds before a password reset token expires" },
+      "account.email_verification_token_ttl_sec": { "label": "Email verification TTL", "description": "Duration in seconds before an email verification token expires" },
+      "account.deletion_token_ttl_sec": { "label": "Account deletion TTL", "description": "Duration in seconds before an account deletion token expires" },
+      "mfa.verify_token_ttl_sec": { "label": "MFA verify TTL", "description": "Duration in seconds to complete MFA setup verification" },
+      "mfa.validate_token_ttl_sec": { "label": "MFA validate TTL", "description": "Duration in seconds to validate a MFA code during sign-in" },
+      "mfa.disabling_token_ttl_sec": { "label": "MFA disabling TTL", "description": "Duration in seconds to confirm MFA disabling" },
+      "security.hash_memory_cost": { "label": "Hash memory cost", "description": "Memory in KiB used by the Argon2 hashing algorithm" },
+      "security.hash_time_cost": { "label": "Hash time cost", "description": "Number of iterations for Argon2 hashing" },
+      "security.hash_parallelism": { "label": "Hash parallelism", "description": "Number of parallel threads for Argon2 hashing" },
+      "security.throttle_ttl_sec": { "label": "Throttle window", "description": "Time window in seconds for rate limiting" },
+      "security.throttle_origin_limit": { "label": "Origin limit", "description": "Maximum requests per origin within the throttle window" },
+      "security.throttle_identity_limit": { "label": "Identity limit", "description": "Maximum requests per identity (email) within the throttle window" },
+      "security.throttle_combined_limit": { "label": "Combined limit", "description": "Maximum requests per origin+identity combination within the throttle window" },
+      "security.endpoint_delay_min_ms": { "label": "Minimum endpoint delay", "description": "Minimum artificial delay in milliseconds added to responses" },
+      "security.endpoint_delay_max_ms": { "label": "Maximum endpoint delay", "description": "Maximum artificial delay in milliseconds added to responses" }
+    }
+  },
+  "passwordRules": {
+    "minLength": "At least {{count}} characters",
+    "hasLowercase": "At least one lowercase letter",
+    "hasUppercase": "At least one uppercase letter",
+    "hasDigit": "At least one digit",
+    "hasSpecialChar": "At least one special character",
+    "noSequentialChars": "No sequential characters",
+    "noRepeatedChars": "No repeated characters",
+    "noKeyboardSequence": "No keyboard sequences",
+    "noUserInfo": "Must not contain personal info",
+    "noCommonPassword": "Must not be a common password"
+  }
+}

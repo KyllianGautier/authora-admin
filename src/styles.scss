@@ -1,1 +1,133 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@use './app/core/components/auth-layout/auth-layout-theme' as auth-layout;
+@use './app/core/components/password-rules/password-rules-theme' as password-rules;
+@use './app/admin/admin-theme' as admin;
+@use './app/admin/settings/settings-theme' as settings;
+@use './app/admin/settings/setting-row/setting-row-theme' as setting-row;
+@use './app/admin/settings/edit-dialog-theme' as edit-dialog;
+@use './app/admin/users/users-theme' as users;
+
+@include mat.app-background();
+
+// Define Material 2 palettes
+$primary: mat.m2-define-palette(mat.$m2-blue-palette, 800, 500, 900);
+$accent: mat.m2-define-palette(mat.$m2-teal-palette, A400, A200, A700);
+
+// Define light theme
+$light-theme: mat.m2-define-light-theme(
+  (
+    color: (
+      primary: $primary,
+      accent: $accent,
+    ),
+    typography: mat.m2-define-typography-config($font-family: 'Sora, sans-serif'),
+    density: 0,
+  )
+);
+
+// Define dark theme
+$dark-theme: mat.m2-define-dark-theme(
+  (
+    color: (
+      primary: $primary,
+      accent: $accent,
+    ),
+  )
+);
+
+// Apply light theme globally
+html {
+  @include mat.all-component-themes($light-theme);
+  @include mat.all-component-typographies($light-theme);
+  @include mat.m2-theme($light-theme);
+  @include mat.button-overrides(
+    (
+      filled-label-text-transform: uppercase,
+      outlined-label-text-transform: uppercase,
+      protected-label-text-transform: uppercase,
+      text-label-text-transform: uppercase,
+      tonal-label-text-transform: uppercase,
+    )
+  );
+
+  // Custom component themes
+  @include auth-layout.theme($light-theme);
+  @include password-rules.theme($light-theme);
+  @include admin.theme($light-theme);
+  @include settings.theme($light-theme);
+  @include setting-row.theme($light-theme);
+  @include edit-dialog.theme($light-theme);
+  @include users.theme($light-theme);
+}
+
+// Apply dark theme colors when .dark-theme is on body
+.dark-theme {
+  @include mat.all-component-colors($dark-theme);
+  @include mat.m2-theme($dark-theme);
+
+  // Custom component colors
+  @include auth-layout.color($dark-theme);
+  @include password-rules.color($dark-theme);
+  @include admin.color($dark-theme);
+  @include settings.color($dark-theme);
+  @include setting-row.color($dark-theme);
+  @include edit-dialog.color($dark-theme);
+  @include users.color($dark-theme);
+}
+
+body {
+  font-family: Sora, sans-serif;
+  margin: 0;
+  position: relative;
+  overflow-x: hidden;
+  background: linear-gradient(
+    135deg,
+    mat.m2-get-color-from-palette($primary, 400) 0%,
+    mat.m2-get-color-from-palette($primary, 100) 50%,
+    mat.m2-get-color-from-palette($accent, 100) 100%
+  );
+  min-height: 100vh;
+
+  &.dark-theme {
+    background: linear-gradient(
+      135deg,
+      mat.m2-get-color-from-palette($primary, 900) 0%,
+      mat.m2-get-color-from-palette($primary, 800) 50%,
+      mat.m2-get-color-from-palette($accent, 900) 100%
+    );
+  }
+}
+
+// Glassmorphism dialog
+.glass-dialog-backdrop {
+  backdrop-filter: blur(4px);
+}
+
+.glass-dialog {
+  @include mat.dialog-overrides(
+    (
+      container-shape: 16px,
+      container-color: rgba(255, 255, 255, 0.35),
+      container-elevation-shadow: 0 8px 32px rgba(0, 0, 0, 0.08),
+    )
+  );
+
+  .mdc-dialog__surface {
+    backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 24px;
+  }
+
+  .dark-theme & {
+    @include mat.dialog-overrides(
+      (
+        container-color: rgba(30, 30, 30, 0.6),
+        container-elevation-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+      )
+    );
+
+    .mdc-dialog__surface {
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  app-admin {
+    .mat-toolbar.mat-primary {
+      @include mat.toolbar-overrides(
+         (
+           container-background-color: transparent,
+           container-text-color: mat.get-theme-color($theme, foreground, text)
+         )
+      )
+    }
+
+  }
+}
+
+@mixin typography($theme) {}
+
+@mixin theme($theme) {
+  @if mat.theme-has($theme, color) {
+    @include color($theme);
+  }
+
+  @if mat.theme-has($theme, typography) {
+    @include typography($theme);
+  }
+}

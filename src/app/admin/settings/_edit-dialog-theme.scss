@@ -1,0 +1,36 @@
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  app-edit-number-dialog,
+  app-edit-string-dialog,
+  app-edit-boolean-dialog {
+    .description,
+    .default {
+      color: mat.get-theme-color($theme, foreground, secondary-text);
+    }
+  }
+}
+
+@mixin typography($theme) {
+  app-edit-number-dialog,
+  app-edit-string-dialog,
+  app-edit-boolean-dialog {
+    .description {
+      font: mat.get-theme-typography($theme, body-2);
+    }
+
+    .default {
+      font: mat.get-theme-typography($theme, caption);
+    }
+  }
+}
+
+@mixin theme($theme) {
+  @if mat.theme-has($theme, color) {
+    @include color($theme);
+  }
+
+  @if mat.theme-has($theme, typography) {
+    @include typography($theme);
+  }
+}

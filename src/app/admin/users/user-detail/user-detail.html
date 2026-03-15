@@ -1,0 +1,28 @@
+@if (user(); as u) {
+  <div class="user-detail" *transloco="let t">
+    <div class="detail-header">
+      <h3>{{ u.email }}</h3>
+      <button mat-icon-button (click)="closePanel()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+    <nav mat-tab-nav-bar fitInkBarToContent [mat-stretch-tabs]="false" [tabPanel]="tabPanel">
+      @for (tab of tabs; track tab.path) {
+        <a
+          mat-tab-link
+          [routerLink]="tab.path"
+          routerLinkActive
+          #rla="routerLinkActive"
+          [active]="rla.isActive"
+        >
+          {{ t(tab.labelKey) }}
+        </a>
+      }
+    </nav>
+
+    <mat-tab-nav-panel #tabPanel>
+      <router-outlet />
+    </mat-tab-nav-panel>
+  </div>
+}

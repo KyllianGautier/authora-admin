@@ -1,0 +1,13 @@
+{
+  "name": "@kylliangautier/authora-admin",
+  "version": "0.0.0",
+  "description": "Authora Admin UI - pre-built static files",
+  "license": "PRIVATE",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KyllianGautier/authora-admin.git"
+  }
+}

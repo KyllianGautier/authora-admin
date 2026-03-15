@@ -1,0 +1,17 @@
+<div class="setting-row" *transloco="let t" (click)="edit.emit()" matRipple>
+  <mat-icon class="type-icon">{{ icon() }}</mat-icon>
+  <div class="info">
+    <span class="label">{{ t('settings.keys.' + key() + '.label') }}</span>
+    <span class="description">{{ t('settings.keys.' + key() + '.description') }}</span>
+  </div>
+  <div class="values">
+    <span class="value" [class.modified]="isModified()">
+      {{ value() | settingValue: type() }}
+    </span>
+    @if (isModified()) {
+      <span class="default">
+        {{ t('settings.default') }}: {{ defaultValue() | settingValue: type() }}
+      </span>
+    }
+  </div>
+</div>

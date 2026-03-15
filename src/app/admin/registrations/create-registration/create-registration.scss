@@ -1,0 +1,11 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 400px;
+  padding-top: 16px;
+}
+
+.email-unavailable {
+  color: var(--mat-sys-error, #f44336);
+}

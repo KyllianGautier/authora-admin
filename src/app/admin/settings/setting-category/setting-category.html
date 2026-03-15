@@ -1,0 +1,9 @@
+@for (setting of settings(); track setting.key) {
+  <app-setting-row
+    [key]="setting.key"
+    [type]="setting.type"
+    [value]="setting.value"
+    [defaultValue]="setting.defaultValue"
+    (edit)="openEditDialog(setting)"
+  />
+}

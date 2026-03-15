@@ -1,0 +1,25 @@
+@use '@angular/material' as mat;
+
+@mixin color($theme) {
+  app-setting-row {
+    .setting-row:hover {
+      background-color: mat.get-theme-color($theme, background, hover);
+    }
+
+    .value.modified {
+      color: mat.get-theme-color($theme, accent);
+    }
+  }
+}
+
+@mixin typography($theme) {}
+
+@mixin theme($theme) {
+  @if mat.theme-has($theme, color) {
+    @include color($theme);
+  }
+
+  @if mat.theme-has($theme, typography) {
+    @include typography($theme);
+  }
+}

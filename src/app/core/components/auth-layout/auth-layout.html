@@ -1,0 +1,18 @@
+<div class="auth-page">
+  <div class="toolbar">
+    <span class="spacer"></span>
+    <app-lang-switcher />
+    <app-theme-toggle />
+  </div>
+
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="title-row">
+        <h2 class="auth-title">
+          <ng-content select="[authLayoutTitle]" />
+        </h2>
+      </div>
+      <ng-content />
+    </div>
+  </div>
+</div>

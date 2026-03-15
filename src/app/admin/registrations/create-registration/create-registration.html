@@ -1,0 +1,66 @@
+<div *transloco="let t">
+  <h2 mat-dialog-title>{{ t('registrations.createTitle') }}</h2>
+  <mat-dialog-content>
+    <div class="form-container">
+      <mat-form-field>
+        <mat-label>{{ t('registrations.email') }}</mat-label>
+        <input matInput type="email" [formControl]="emailFC" (blur)="checkEmail()" />
+        @if (emailFC.hasError('required')) {
+          <mat-error>{{ t('registrations.errors.emailRequired') }}</mat-error>
+        } @else if (emailFC.hasError('email')) {
+          <mat-error>{{ t('registrations.errors.emailInvalid') }}</mat-error>
+        }
+        @if (emailAvailable() === false) {
+          <mat-hint class="email-unavailable">{{ t('registrations.errors.emailUnavailable') }}</mat-hint>
+        }
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>{{ t('registrations.password') }}</mat-label>
+        <input matInput type="password" [formControl]="passwordFC" #passwordInput />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="passwordInput.type === 'password' ? (passwordInput.type = 'text') : (passwordInput.type = 'password')"
+          type="button"
+        >
+          <mat-icon>{{ passwordInput.type === 'password' ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+        @if (passwordFC.hasError('required')) {
+          <mat-error>{{ t('registrations.errors.passwordRequired') }}</mat-error>
+        }
+      </mat-form-field>
+
+      <app-password-rules [password]="passwordFC.value" [email]="emailFC.value" />
+
+      <mat-form-field>
+        <mat-label>{{ t('registrations.confirmPassword') }}</mat-label>
+        <input matInput type="password" [formControl]="confirmPasswordFC" #confirmPasswordInput />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="confirmPasswordInput.type === 'password' ? (confirmPasswordInput.type = 'text') : (confirmPasswordInput.type = 'password')"
+          type="button"
+        >
+          <mat-icon>{{ confirmPasswordInput.type === 'password' ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+        @if (confirmPasswordFC.hasError('required')) {
+          <mat-error>{{ t('registrations.errors.confirmPasswordRequired') }}</mat-error>
+        } @else if (confirmPasswordFC.hasError('passwordMismatch')) {
+          <mat-error>{{ t('registrations.errors.passwordMismatch') }}</mat-error>
+        }
+      </mat-form-field>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>{{ t('common.cancel') }}</button>
+    <button
+      mat-flat-button
+      color="primary"
+      (click)="onSubmit()"
+      [disabled]="submitting() || form.invalid || emailAvailable() === false"
+    >
+      {{ t('registrations.create') }}
+    </button>
+  </mat-dialog-actions>
+</div>

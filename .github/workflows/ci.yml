@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+
+  publish:
+    needs: build-and-test
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          registry-url: https://npm.pkg.github.com
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Prepare package
+        run: |
+          cp publish.package.json dist/authora-admin/browser/package.json
+          cd dist/authora-admin/browser
+          VERSION="0.0.0-${GITHUB_REF_NAME}.$(echo $GITHUB_SHA | cut -c1-7)"
+          npm version "$VERSION" --no-git-tag-version
+
+      - name: Publish to GitHub Packages
+        run: npm publish --access restricted
+        working-directory: dist/authora-admin/browser
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

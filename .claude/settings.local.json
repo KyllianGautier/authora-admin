@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:material.angular.io)",
+      "WebSearch",
+      "WebFetch(domain:material.angular.dev)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(npm install:*)",
+      "Bash(npm view:*)",
+      "Bash(npx ng:*)",
+      "Bash(npm run:*)",
+      "Bash(docker build:*)",
+      "Bash(docker images:*)",
+      "Bash(docker pull:*)",
+      "Bash(docker rm:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:jsverse.gitbook.io)",
+      "Bash(npm test:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(mkdir -p admin)",
+      "Bash(mv layout/layout.ts admin/admin.ts)",
+      "Bash(mv layout/layout.html admin/admin.html)",
+      "Bash(mv layout/layout.scss admin/admin.scss)",
+      "Bash(mv registrations:*)",
+      "Bash(node:*)",
+      "WebFetch(domain:angular.dev)",
+      "Bash(ls /home/kyllian/Projects/authora/docs/v1-openapi*)"
+    ]
+  }
+}

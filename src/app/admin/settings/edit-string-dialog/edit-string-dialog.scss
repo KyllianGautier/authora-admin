@@ -1,0 +1,14 @@
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 400px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.description {
+  margin: 0 0 16px;
+}

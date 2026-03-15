@@ -1,0 +1,166 @@
+{
+  "common": {
+    "confirmTitle": "Confirmation",
+    "delete": "Supprimer",
+    "cancel": "Annuler",
+    "error": "Une erreur est survenue"
+  },
+  "app": {
+    "title": "Authora Admin"
+  },
+  "nav": {
+    "registrations": "Inscriptions",
+    "users": "Utilisateurs",
+    "settings": "Paramètres"
+  },
+  "signIn": {
+    "title": "Connexion",
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "submit": "Se connecter",
+    "errors": {
+      "usernameRequired": "Le nom d'utilisateur est requis",
+      "passwordRequired": "Le mot de passe est requis",
+      "invalidCredentials": "Nom d'utilisateur ou mot de passe invalide"
+    }
+  },
+  "registrations": {
+    "email": "Email",
+    "tokenExpiresIn": "Expire dans",
+    "createdAt": "Créée le",
+    "deleteSelected": "Supprimer ({{count}})",
+    "deleted": "{{count}} inscription(s) supprimée(s)",
+    "confirmDeleteOne": "Êtes-vous sûr de vouloir supprimer cette inscription ?",
+    "confirmDeleteMany": "Êtes-vous sûr de vouloir supprimer {{count}} inscription(s) ?",
+    "create": "Créer",
+    "createTitle": "Créer une inscription",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "created": "Inscription créée",
+    "createError": "Échec de la création de l'inscription",
+    "errors": {
+      "emailRequired": "L'email est requis",
+      "emailInvalid": "Veuillez entrer un email valide",
+      "emailUnavailable": "Cet email est déjà utilisé",
+      "passwordRequired": "Le mot de passe est requis",
+      "confirmPasswordRequired": "Veuillez confirmer le mot de passe",
+      "passwordMismatch": "Les mots de passe ne correspondent pas"
+    }
+  },
+  "users": {
+    "email": "Email",
+    "createdAt": "Créé le",
+    "deleteSelected": "Supprimer ({{count}})",
+    "deleted": "{{count}} utilisateur(s) supprimé(s)",
+    "confirmDeleteOne": "Êtes-vous sûr de vouloir supprimer cet utilisateur ?",
+    "confirmDeleteMany": "Êtes-vous sûr de vouloir supprimer {{count}} utilisateur(s) ?"
+  },
+  "userDetail": {
+    "tabs": {
+      "oneTimeTokens": "Jetons à usage unique",
+      "passwords": "Mots de passe",
+      "refreshTokens": "Jetons de rafraîchissement",
+      "mfa": "MFA"
+    },
+    "type": "Type",
+    "status": "Statut",
+    "expiresIn": "Expire dans",
+    "createdAt": "Créé le",
+    "active": "Actif",
+    "revoked": "Révoqué",
+    "verified": "Vérifié",
+    "pending": "En attente",
+    "recoveryCodes": "Codes de récupération",
+    "revokeAll": "Tout révoquer",
+    "removeMfa": "Supprimer MFA",
+    "tokenRevoked": "Jeton révoqué",
+    "allTokensRevoked": "Tous les jetons révoqués",
+    "passwordRevoked": "Mot de passe révoqué",
+    "refreshTokenRevoked": "Jeton de rafraîchissement révoqué",
+    "allRefreshTokensRevoked": "Tous les jetons de rafraîchissement révoqués",
+    "mfaRemoved": "MFA supprimé",
+    "revoke": "Révoquer",
+    "confirmRevokeToken": "Êtes-vous sûr de vouloir révoquer ce jeton ?",
+    "confirmRevokeAllTokens": "Êtes-vous sûr de vouloir révoquer tous les jetons à usage unique ?",
+    "confirmRevokePassword": "Êtes-vous sûr de vouloir révoquer ce mot de passe ?",
+    "confirmRevokeRefreshToken": "Êtes-vous sûr de vouloir révoquer ce jeton de rafraîchissement ?",
+    "confirmRevokeAllRefreshTokens": "Êtes-vous sûr de vouloir révoquer tous les jetons de rafraîchissement ?",
+    "confirmRemoveMfa": "Êtes-vous sûr de vouloir supprimer le MFA de cet utilisateur ?",
+    "noOneTimeTokens": "Aucun jeton à usage unique",
+    "noPasswords": "Aucun mot de passe",
+    "noRefreshTokens": "Aucun jeton de rafraîchissement",
+    "noMfa": "MFA non activé"
+  },
+  "settings": {
+    "saved": "Paramètre enregistré",
+    "reset": "Paramètre réinitialisé",
+    "default": "Défaut",
+    "value": "Valeur",
+    "apply": "Appliquer",
+    "applyDefault": "Appliquer le défaut",
+    "modified": "Modifié",
+    "resetAll": "Tout réinitialiser",
+    "resetAllConfirm": "Êtes-vous sûr de vouloir réinitialiser tous les paramètres à leurs valeurs par défaut ?",
+    "resetAllDone": "Tous les paramètres ont été réinitialisés",
+    "enabled": "Activé",
+    "disabled": "Désactivé",
+    "errors": {
+      "required": "La valeur est requise",
+      "min": "La valeur minimale est {{min}}",
+      "max": "La valeur maximale est {{max}}",
+      "greaterThan": "Doit être supérieur à {{key}} ({{value}})",
+      "lessThan": "Doit être inférieur à {{key}} ({{value}})"
+    },
+    "categories": {
+      "authentication": "Authentification",
+      "password": "Mot de passe",
+      "account": "Compte",
+      "mfa": "MFA",
+      "security": "Sécurité"
+    },
+    "keys": {
+      "authentication.access_token_ttl_sec": { "label": "Durée du jeton d'accès", "description": "Durée en secondes avant expiration du jeton d'accès" },
+      "authentication.refresh_token_short_ttl_sec": { "label": "Jeton de rafraîchissement (court)", "description": "Durée en secondes du jeton court (sans mémorisation)" },
+      "authentication.refresh_token_long_ttl_sec": { "label": "Jeton de rafraîchissement (long)", "description": "Durée en secondes du jeton long (avec mémorisation)" },
+      "authentication.magic_link_token_ttl_sec": { "label": "Durée du lien magique", "description": "Durée en secondes avant expiration d'un lien magique" },
+      "authentication.magic_link_refresh_token_ttl_sec": { "label": "Rafraîchissement du lien magique", "description": "Durée en secondes du jeton émis via lien magique" },
+      "password.min_length": { "label": "Longueur minimale", "description": "Nombre minimum de caractères requis" },
+      "password.require_digit": { "label": "Exiger un chiffre", "description": "Le mot de passe doit contenir au moins un chiffre" },
+      "password.require_special_char": { "label": "Exiger un caractère spécial", "description": "Le mot de passe doit contenir au moins un caractère spécial" },
+      "password.require_lowercase": { "label": "Exiger une minuscule", "description": "Le mot de passe doit contenir au moins une lettre minuscule" },
+      "password.require_uppercase": { "label": "Exiger une majuscule", "description": "Le mot de passe doit contenir au moins une lettre majuscule" },
+      "password.forbid_sequential_chars": { "label": "Interdire les séquences", "description": "Rejeter les mots de passe contenant des caractères séquentiels (abc, 123)" },
+      "password.forbid_repeated_chars": { "label": "Interdire les répétitions", "description": "Rejeter les mots de passe contenant des caractères répétés (aaa, 111)" },
+      "password.forbid_keyboard_sequence": { "label": "Interdire les séquences clavier", "description": "Rejeter les mots de passe contenant des motifs clavier (qwerty, azerty)" },
+      "password.forbid_user_info": { "label": "Interdire les infos personnelles", "description": "Rejeter les mots de passe contenant l'email ou le nom de l'utilisateur" },
+      "password.forbid_common_password": { "label": "Interdire les mots de passe courants", "description": "Rejeter les mots de passe couramment utilisés ou compromis" },
+      "password.forgot_token_ttl_sec": { "label": "Durée du jeton mot de passe oublié", "description": "Durée en secondes avant expiration du jeton de réinitialisation" },
+      "account.email_verification_token_ttl_sec": { "label": "Durée de vérification email", "description": "Durée en secondes avant expiration du jeton de vérification email" },
+      "account.deletion_token_ttl_sec": { "label": "Durée de suppression de compte", "description": "Durée en secondes avant expiration du jeton de suppression de compte" },
+      "mfa.verify_token_ttl_sec": { "label": "Durée de vérification MFA", "description": "Durée en secondes pour compléter la vérification MFA" },
+      "mfa.validate_token_ttl_sec": { "label": "Durée de validation MFA", "description": "Durée en secondes pour valider un code MFA à la connexion" },
+      "mfa.disabling_token_ttl_sec": { "label": "Durée de désactivation MFA", "description": "Durée en secondes pour confirmer la désactivation MFA" },
+      "security.hash_memory_cost": { "label": "Coût mémoire du hachage", "description": "Mémoire en KiB utilisée par l'algorithme Argon2" },
+      "security.hash_time_cost": { "label": "Coût temporel du hachage", "description": "Nombre d'itérations pour le hachage Argon2" },
+      "security.hash_parallelism": { "label": "Parallélisme du hachage", "description": "Nombre de threads parallèles pour le hachage Argon2" },
+      "security.throttle_ttl_sec": { "label": "Fenêtre de limitation", "description": "Fenêtre en secondes pour la limitation de débit" },
+      "security.throttle_origin_limit": { "label": "Limite par origine", "description": "Nombre maximum de requêtes par origine dans la fenêtre" },
+      "security.throttle_identity_limit": { "label": "Limite par identité", "description": "Nombre maximum de requêtes par identité (email) dans la fenêtre" },
+      "security.throttle_combined_limit": { "label": "Limite combinée", "description": "Nombre maximum de requêtes par combinaison origine+identité" },
+      "security.endpoint_delay_min_ms": { "label": "Délai minimum", "description": "Délai artificiel minimum en millisecondes ajouté aux réponses" },
+      "security.endpoint_delay_max_ms": { "label": "Délai maximum", "description": "Délai artificiel maximum en millisecondes ajouté aux réponses" }
+    }
+  },
+  "passwordRules": {
+    "minLength": "Au moins {{count}} caractères",
+    "hasLowercase": "Au moins une lettre minuscule",
+    "hasUppercase": "Au moins une lettre majuscule",
+    "hasDigit": "Au moins un chiffre",
+    "hasSpecialChar": "Au moins un caractère spécial",
+    "noSequentialChars": "Pas de caractères séquentiels",
+    "noRepeatedChars": "Pas de caractères répétés",
+    "noKeyboardSequence": "Pas de séquences clavier",
+    "noUserInfo": "Ne doit pas contenir d'informations personnelles",
+    "noCommonPassword": "Ne doit pas être un mot de passe courant"
+  }
+}

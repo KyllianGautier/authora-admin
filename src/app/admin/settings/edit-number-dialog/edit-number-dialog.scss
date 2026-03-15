@@ -1,0 +1,18 @@
+.spacer {
+  flex: 1;
+}
+
+[matSuffix] {
+  padding-right: 16px;
+}
+
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 400px;
+}
+
+.description {
+  margin: 0 0 16px;
+}

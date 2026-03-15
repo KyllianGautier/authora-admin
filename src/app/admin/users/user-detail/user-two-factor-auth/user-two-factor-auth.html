@@ -1,0 +1,16 @@
+<div class="tab-content" *transloco="let t">
+  @if (loading()) {
+    <div class="tab-loading"><mat-spinner diameter="32" /></div>
+  } @else if (mfa(); as tfa) {
+    <div class="tfa-info">
+      <p><strong>{{ t('userDetail.status') }}:</strong> {{ tfa.isVerified ? t('userDetail.verified') : t('userDetail.pending') }}</p>
+      <p><strong>{{ t('userDetail.recoveryCodes') }}:</strong> {{ tfa.recoveryCodeCount }}</p>
+      <p><strong>{{ t('userDetail.createdAt') }}:</strong> {{ tfa.createdAt | date: 'medium' }}</p>
+      <button mat-flat-button color="warn" (click)="remove()">
+        {{ t('userDetail.removeMfa') }}
+      </button>
+    </div>
+  } @else {
+    <p class="empty">{{ t('userDetail.noMfa') }}</p>
+  }
+</div>

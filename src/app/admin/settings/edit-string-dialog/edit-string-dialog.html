@@ -1,0 +1,26 @@
+<ng-container *transloco="let t">
+  <h2 mat-dialog-title>{{ data.label }}</h2>
+  <mat-dialog-content>
+    <div class="vertical-container">
+      <p class="description">{{ t('settings.keys.' + data.key + '.description') }}</p>
+      <mat-form-field>
+        <mat-label>{{ t('settings.value') }}</mat-label>
+        <input matInput type="text" [formControl]="control" />
+        @if (control.hasError('required')) {
+          <mat-error>{{ t('settings.errors.required') }}</mat-error>
+        }
+      </mat-form-field>
+      <div class="default">
+        {{ t('settings.default') }}: {{ data.meta.default }}
+      </div>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button (click)="applyDefault()" [disabled]="control.value === data.meta.default">{{ t('settings.applyDefault') }}</button>
+    <span class="spacer"></span>
+    <button mat-button [mat-dialog-close]="undefined">{{ t('common.cancel') }}</button>
+    <button mat-flat-button color="primary" (click)="save()" [disabled]="control.invalid">
+      {{ t('settings.apply') }}
+    </button>
+  </mat-dialog-actions>
+</ng-container>

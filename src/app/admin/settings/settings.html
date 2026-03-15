@@ -1,0 +1,31 @@
+<div class="page" *transloco="let t">
+  <div class="header">
+    <h1>{{ t('nav.settings') }}</h1>
+    <span class="spacer"></span>
+    <button mat-stroked-button color="warn" (click)="resetAll()" [disabled]="!hasModified()">{{ t('settings.resetAll') }}</button>
+  </div>
+
+  @if (loading()) {
+    <div class="loading">
+      <mat-spinner diameter="32" />
+    </div>
+  } @else {
+    <nav mat-tab-nav-bar fitInkBarToContent [mat-stretch-tabs]="false" [tabPanel]="tabPanel">
+      @for (category of categories; track category.path) {
+        <a
+          mat-tab-link
+          [routerLink]="category.path"
+          routerLinkActive
+          #rla="routerLinkActive"
+          [active]="rla.isActive"
+        >
+          {{ t(category.labelKey) }}
+        </a>
+      }
+    </nav>
+
+    <mat-tab-nav-panel #tabPanel>
+      <router-outlet />
+    </mat-tab-nav-panel>
+  }
+</div>
